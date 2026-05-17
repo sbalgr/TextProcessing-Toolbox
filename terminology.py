@@ -6,7 +6,7 @@ class ProcessMemoqTerminology:
 
     def __check_file(self, file_paths):
         import os
-        file_ext = os.path.splitext(file_paths[:])
+        file_ext = os.path.splitext(file_paths)
         if file_ext != [".xlsx", ".csv"]:
             raise ValueError('No .xlsx or .csv files detected.')
 
