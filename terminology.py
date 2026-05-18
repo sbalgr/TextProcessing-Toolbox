@@ -2,7 +2,7 @@ class ProcessMemoqTerminology:
 
     def __init__(self, file_paths):
         self.file_paths = file_paths
-        self.terminology_merged = terminology_merged
+        self.terminology_merged = None
 
     def __check_file(self, file_paths):
         import os
@@ -24,8 +24,8 @@ class ProcessMemoqTerminology:
                 self.import_xlsx(file_paths)
             if file_ext == ".csv":
                 self.import_csv(file_paths)
-        terminology_merged = pd.DataFrame.merge_terminology()
+        self.terminology_merged = pd.DataFrame.merge_terminology()
 
     def export_merged_terminology_as_xlsx(self):
-        if not self.terminology_merged=True
-            terminology_merged = self.terminology_merged.to_excel("./tb_merged.xlsx", index=False)
+        if not self.terminology_merged == True:
+            self.terminology_merged = self.terminology_merged.to_excel("./tb_merged.xlsx", index=False)
